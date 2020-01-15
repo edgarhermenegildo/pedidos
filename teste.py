@@ -1,4 +1,5 @@
 from libs.packeges import interface
+from clint.textui import colored
 import os
 
 lista = ['Cadastrar Cliente', 'Consultar Cliente', 'Sair']
@@ -9,4 +10,4 @@ while True:
         interface.titulo('Saindo do Sitema.')
         break
     else:
-        print('ERRO! Digite uma opção valida.')
+        print(colored.red('ERRO! Digite uma opção valida.'))
