@@ -1,7 +1,3 @@
-# Cores
-cor = ['\033[m',        # 0 Limpa
-       '\033[1;31m']    # 1 vermelho
-
 from clint.textui import colored
 
 
@@ -10,7 +6,7 @@ def printc(msg):
     Função para dar um print numa linha centralizado em 80 caracteres.
     :param msg: Mensagem que vai aparecer na linha
     """
-    print(f'{msg:^80}')
+    print(colored.blue(f'{msg:^80}'))
 
 
 def linha(msg='='):
@@ -62,8 +58,8 @@ def menu(lista):
     c = 1
     titulo('Sistema para cadastro de clientes')
     for item in lista:
-        printc(f'{c:>3} - {item:<20}')
+        printc(f'{c:>3}- {item:<20}')
         c += 1
     linha()
-    opc = opcao('Sua Opção: ')
+    opc = opcao(colored.green('Sua Opção: '))
     return opc
