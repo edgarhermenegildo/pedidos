@@ -130,3 +130,4 @@ dmypy.json
 
 # Ignorar os dados.
 libs/config/dados.py
+libs/config/config.json
