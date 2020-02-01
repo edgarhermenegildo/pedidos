@@ -7,6 +7,7 @@ import os
 lista = ['Cadastrar Cliente', 'Consultar Cliente', 'Sair']
 flag = cont = 0
 while True:
+    interface.linha(' LOGIN ')
     login = str(input('Login: ')).strip().lower()
     passwd = getpass.getpass('Digite sua senha: ')
     cursor = connect.conexao.cursor()
@@ -24,8 +25,9 @@ while True:
                 else:
                     print(colored.red('ERRO! Digite uma opção valida.'))
     cont += 1
-    if flag == 1 or cont == 3:
-        break
     print('Login ou tenha invalido.')
-
-
+    if flag == 1:
+        break
+    if cont == 3:
+        interface.printc('Você errou 3x o login e senha.')
+        break
